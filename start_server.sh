@@ -1,1 +1,1 @@
-node src/server.js
+nohup node src/server.js &

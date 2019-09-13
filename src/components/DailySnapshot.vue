@@ -61,7 +61,7 @@
 import GraphMixin from '../mixins/graph'
 import api from '@/api'
 import moment from 'moment'
-import Case from 'Case'
+import Case from 'case'
 import JsonExcel from 'vue-json-excel'
 
 export default {

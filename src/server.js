@@ -1,7 +1,7 @@
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
-var Case = require('Case');
+var Case = require('case');
 
 var app = express();
 
@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json())
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://chs-mongo:27017/";
+var url = "mongodb://localhost:27017/";
 
 app.get('/department/:dept/snapshot', function(req, res) {
 
