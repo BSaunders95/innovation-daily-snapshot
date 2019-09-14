@@ -8,4 +8,4 @@ RUN npm install case mongodb vue-json-excel vue2-highcharts --save
 
 CMD ./start_server.sh && ./start_client.sh
 
-EXPOSE 8080
+EXPOSE 8080 27017 8081
