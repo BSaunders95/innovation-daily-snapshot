@@ -2,10 +2,12 @@ FROM node:10.0.0-alpine
 
 RUN apk update && apk upgrade && apk add bash
 
-COPY . .
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+RUN npm run build
 
-RUN npm install case mongodb vue-json-excel vue2-highcharts --save
+CMD npm run start
 
-CMD ./start_server.sh && ./start_client.sh
-
-EXPOSE 8080 27017 8081
+EXPOSE 8080 27017
