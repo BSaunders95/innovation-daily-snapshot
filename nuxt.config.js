@@ -5,7 +5,8 @@ module.exports = {
     '~/api/dayPosition.js',
     '~/api/departments.js',
     '~/api/users.js',
-    '~/api/auth.js'
+    '~/api/auth.js',
+    '~/api/feedback.js'
   ],
   /*
   ** Headers of the page
@@ -39,7 +40,8 @@ module.exports = {
   */
   plugins: [
     { src: '@/plugins/slider-plugin' },
-    { src: '@/plugins/json-excel', ssr: false }
+    { src: '@/plugins/json-excel', ssr: false },
+    { src: '@/plugins/bv-toast' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -70,9 +72,9 @@ module.exports = {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'api/auth/login', method: 'post', propertyName: 'token' },
+          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
           logout: { url: '/api/auth/logout', method: 'post' },
-          user: { url: 'api/auth/user', method: 'get', propertyName: 'user' }
+          user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
         }
       }
     }
@@ -90,6 +92,7 @@ module.exports = {
   },
 
   server: {
+    host: '0.0.0.0',
     port: 8080
   }
 }

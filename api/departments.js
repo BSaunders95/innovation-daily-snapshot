@@ -7,7 +7,7 @@ const app = express()
 app.use(bodyParser.json())
 
 const MongoClient = require('mongodb').MongoClient
-const url = 'mongodb://chs-mongo:27017/'
+const url = process.env.MONGODB_URL
 
 app.get('/departments', (req, res) => {
   MongoClient.connect(url, function (err, db) {

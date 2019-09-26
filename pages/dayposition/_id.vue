@@ -151,6 +151,16 @@ export default {
       const self = this
       axios.get('/api/daypositions/' + this.$route.params.id + '?time=' + this.dateRange).then(function (response) {
         self.addData(response.data[0], response.data[1])
+        self.$refs.lineCharts.chart.yAxis[0].addPlotLine({
+          color: '#28a745',
+          width: 3,
+          value: self.department.maxSuccess
+        })
+        self.$refs.lineCharts.chart.yAxis[0].addPlotLine({
+          color: '#ffc107',
+          width: 3,
+          value: self.department.maxWarning
+        })
       })
     },
     getLatestDayPosition () {

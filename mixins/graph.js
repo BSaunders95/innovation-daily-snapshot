@@ -50,10 +50,12 @@ const graphMixin = {
         plotOptions: {
           line: {
             marker: {
-              radius: 4,
-              lineColor: '#666666',
+              radius: 3,
+              lineColor: '#ffffff',
               lineWidth: 1
-            }
+            },
+            color: '#000000',
+            lineWidth: 1
           },
           series: {
             point: {

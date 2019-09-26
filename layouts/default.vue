@@ -11,6 +11,9 @@
         <b-nav-item v-if="$auth.$state.loggedIn && $auth.$state.user.superUser" link-classes="navbar-text" href="/users">
           Users
         </b-nav-item>
+        <b-nav-item v-if="$auth.$state.loggedIn && !$auth.$state.user.superUser" link-classes="navbar-text" href="/feedback">
+          Feedback
+        </b-nav-item>
       </b-nav>
       <b-navbar-nav style="flex-grow: 6; align-items: flex-end">
         <b-nav-form>

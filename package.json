@@ -1,7 +1,7 @@
 {
-  "name": "test",
+  "name": "dailysnapshot",
   "version": "1.0.0",
-  "description": "My outstanding Nuxt.js project",
+  "description": "The Companies House Daily Snapshot Project",
   "author": "bsaunders95",
   "private": true,
   "scripts": {
