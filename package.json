@@ -32,7 +32,7 @@
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.1",
     "net": "^1.0.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "tls": "0.0.1",
     "vue-json-excel": "^0.2.98",
     "vue2-highcharts": "^1.2.5"
